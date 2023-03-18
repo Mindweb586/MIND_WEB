@@ -1,5 +1,6 @@
 document.getElementsByClassName("image")[0].addEventListener("click", () => {
-        window.open("../html_pages/alphabets.html");
+        
+        window.open("./html_pages/alphabets.html");
 });
 
 document.getElementsByClassName("article")[0].addEventListener("click", () => {
