@@ -1,4 +1,5 @@
 document.getElementsByClassName("image")[0].addEventListener("click", () => {
+        
         window.open("./html_pages/alphabets.html");
 });
 
