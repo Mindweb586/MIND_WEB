@@ -1,547 +1,85 @@
-var words = document.getElementById("spelling");
-function spell(spells) {
-  words.innerText = spells;
+var words = document.getElementById("spelling");                         //Alphabets("","","","","","","","","","")
+let img1 = document.getElementById("image1");
+let img2 = document.getElementById("img2");
+let img3 = document.getElementById("img3");
+
+function Alphabets(id,spelling,speech,img,img4,img5,img2_spelling,img2_speech,img3_spelling,img3_speech){
+    let alpha = document.getElementById(`${id}`)
+    if("speechSynthesis" in window){
+        alpha.onclick =()=>{
+            let msg = new SpeechSynthesisUtterance(`${speech}`);
+            speechSynthesis.speak(msg);
+            words.innerHTML = `${spelling}`;
+            img1.innerHTML = `<img src=${img} width=250px height=250px/>`;
+            img2.innerHTML = `<img src=${img4} width=200px height=200px/>`;
+            img3.innerHTML = `<img src=${img5} width=200px height=200px/>`;
+            
+            img1.onclick =()=>{
+                speechSynthesis.speak(msg);
+                words.innerHTML = `${spelling}`;
+            }
+            img2.onclick=()=>{
+            let msg = new SpeechSynthesisUtterance(`${img2_speech}`);
+            speechSynthesis.speak(msg);
+            words.innerHTML = `${img2_spelling}`;
+            }
+            img3.onclick=()=>{
+                let msg = new SpeechSynthesisUtterance(`${img3_speech}`);
+                speechSynthesis.speak(msg);
+                words.innerHTML = `${img3_spelling}`;
+                }
+        }
+    }
 }
 
-function a() {
-  let a = document.getElementById("AlphaA");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-  
-  if ("speechSynthesis" in window) {
-      
-      let demo = document.getElementById("AlphaA");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("A; for; Apple");
-          speechSynthesis.speak(msg);
-          spell("A For APPLE");
-          target1.innerHTML = "<img src=../assets/alphabets/A-img/apple.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/A-img/Aeroplane.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=../assets/alphabets/A-img/Arrow.jpg width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaA","A FOR APPLE","A; FOR; Apple","/assets/alphabets/A-img/apple.jpg","/assets/alphabets/A-img/Aeroplane.jpg","/assets/alphabets/A-img/Arrow.jpg","A FOR AEROPLANE","A; For; Aeroplane","A FOR ARROW","A; For; Arrow")
 
-function b() {
-  let a = document.getElementById("AlphaB");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaB","B FOR BALL","B; for; BALL","/assets/alphabets/B-img/ball","/assets/alphabets/B-img/bird","/assets/alphabets/B-img/balloon.avif","B FOR BIRD","B; FOR; BIRD","B FOR BALLOON","B; FOR; BALLON")
 
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaB");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("B; for; Ball");
-          speechSynthesis.speak(msg);
-          spell("B For BALL");
-          target1.innerHTML = "<img src=../assets/alphabets/B-img/ball width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/B-img/bird width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/B-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaC","C FOR CAT","C; for; CAT","/assets/alphabets/C-img/cat.png","/assets/alphabets/C-img/cow.jpg","/assets/alphabets/C-img/cake.jpg","C FOR COW","C; FOR;  COW","C FOR CAKE","C; FOR; CAKE")
 
-function c() {
-  let a = document.getElementById("AlphaC");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaD","D FOR DOG","d; for; DOG","/assets/alphabets/D-img/dog.jpg","/assets/alphabets/D-img/doll","/assets/alphabets/D-img/duck.avif","D FOR DOLL","D; FOR; DOLL","D FOR DUCK","D; FOR; DUCK")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaC");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("C; for; Cat");
-          speechSynthesis.speak(msg);
-          spell("C For CAT");
-          target1.innerHTML = "<img src=../assets/alphabets/C-img/cat.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/C-img/cow.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/C-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaE","E FOR ELEPHANT","E; For; Elephant","/assets/alphabets/E-img/elephant.jpg","/assets/alphabets/E-img/egg.png","/assets/alphabets/E-img/eagle.jpg","E FOR EGG","E; FOR; EGG","E FOR EAGLE","E; FOR; EAGLE")
 
-function d() {
-  let a = document.getElementById("AlphaD");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaF","F FOR FISH","F; FOR; FISH","/assets/alphabets/F-img/fish.png","/assets/alphabets/F-img/fan.jpg","/assets/alphabets/F-img/frog.avif","F FOR FAN","F; FOR; FAN","F FOR FROG","F; FOR; FROG")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaD");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("D; for; Dog");
-          speechSynthesis.speak(msg);
-          spell("D For DOG");
-          target1.innerHTML = "<img src=../assets/alphabets/D-img/dog.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/D-img/doll width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/D-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaG","G FOR GRAPES","G; FOR; GRAPES","/assets/alphabets/G-img/grapes.jpg","/assets/alphabets/G-img/goat.jpg","/assets/alphabets/G-img/grass.jpeg","G FOR GOAT","G; FOR; GOAT","G FOR GRASS","G; FOR; GRASS")
 
-function e() {
-  let a = document.getElementById("AlphaE");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaH","H FOR HEN","H; FOR; HEN","/assets/alphabets/H-img/hen.jpg","/assets/alphabets/H-img/horse.jpg","/assets/alphabets/H-img/house.jpg","H FOR HORSE","H; FOR; HORSE","H FOR HOUSE","H; FOR; HOUSE")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaE");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("E; for; Elephant");
-          speechSynthesis.speak(msg);
-          spell("E For ELEPHANT");
-          target1.innerHTML = "<img src=../assets/alphabets/E-img/elephant.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/E-img/egg.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/E-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaI","I FOR ICE-CREAM","I; FOR; ICE,CREAM","/assets/alphabets/I-img/ice-cream.png","/assets/alphabets/I-img/ink.jpg","/assets/alphabets/I-img/iron.jpg","I FOR INK","I; FOR; INK","I FOR IRON","I; FOR; IRON")
 
-function f() {
-  let a = document.getElementById("AlphaF");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaF");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("F; for; Fish");
-          speechSynthesis.speak(msg);
-          spell("F For FISH");
-          target1.innerHTML = "<img src=../assets/alphabets/F-img/fish.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/F-img/fan.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/F-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaJ","J FOR JOEKR","J; FOR; JOKER","/assets/alphabets/J-img/joker.png","/assets/alphabets/J-img/jug.png","/assets/alphabets/J-img/jelly.avif","J FOR JUG","J; FOR; JUG","J FOR JELLY","J; FOR; JELLY")
 
-function g() {
-  let a = document.getElementById("AlphaG");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaK","K FOR KITE","K; FOR; KITE","/assets/alphabets/K-img/kite.png","/assets/alphabets/K-img/kangaroo.png","/assets/alphabets/K-img/king.avif","K FOR KANGAROO","K; FOR; KANGAROO","K FOR KING","K; FOR; KING")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaG");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("G; for; Grapes");
-          speechSynthesis.speak(msg);
-          spell("G For GRAPES");
-          target1.innerHTML = "<img src=../assets/alphabets/G-img/grapes.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/G-img/goat.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/G-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaL","L FOR LION","L; FOR; LION","/assets/alphabets/L-img/lion.png","/assets/alphabets/L-img/lamp.png","/assets/alphabets/L-img/lemon.jpg","L FOR LAMP","L; FOR; LAMP","L FOR LEMON","L; FOR; LEMON")
 
-function h() {
-  let a = document.getElementById("AlphaH");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaM","M FOR MANGO","M; FOR; MANGO","/assets/alphabets/M-img/mango.jpg","/assets/alphabets/M-img/monkey.png","/assets/alphabets/M-img/moon.jpg","M FOR MONKEY","M; FOR; MONKEY","M FOR MOON","M; FOR; MOON")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaH");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("H; for; Hen");
-          speechSynthesis.speak(msg);
-          spell("H For HEN");
-          target1.innerHTML = "<img src=../assets/alphabets/H-img/hen.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/H-img/horse.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/H-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaN","N FOR NET","N; FOR; NET","/assets/alphabets/N-img/net.png","/assets/alphabets/N-img/neck.jpg","/assets/alphabets/N-img/nest.jpg","N FOR NECK","N; FOR; NECK","N FOR NEST","N; FOR; NEST")
 
-function i() {
-  let a = document.getElementById("AlphaI");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaO","O FOR ORANGE","O; FOR; ORANGE","/assets/alphabets/O-img/orange.png","/assets/alphabets/O-img/owl.jpg","/assets/alphabets/O-img/onion.jpeg","O FOR OWL","O; FOR; OWL","O FOR ONION","O; FOR; ONION")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaI");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("I; for; Ice-cream");
-          speechSynthesis.speak(msg);
-          spell("I For ICE-CREAM");
-          target1.innerHTML = "<img src=../assets/alphabets/I-img/ice-cream.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/I-img/ink.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/I-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaP","P FOR PARROT","P; FOR; PARROT","/assets/alphabets/P-img/parrot.jpg","/assets/alphabets/P-img/pen.jpg","/assets/alphabets/P-img/panda.avif","P FOR PEN","P; FOR; PEN","P FOR PANDA","P; FOR; PANDA")
 
-function j() {
-  let a = document.getElementById("AlphaJ");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaQ","Q FOR QUEEN","Q; FOR; QUEEN","/assets/alphabets/Q-img/queen.jpg","/assets/alphabets/Q-img/question-mark.png","/assets/alphabets/Q-img/quail.jpeg","Q FOR QUESTION-MARK","Q; FOR; QUESTION,MARK","Q FOR QUAIL","Q; FOR; QUAIL")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaJ");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("J; for; Joker");
-          speechSynthesis.speak(msg);
-          spell("J For JOKER");
-          target1.innerHTML = "<img src=../assets/alphabets/J-img/joker.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/J-img/jug.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/J-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaR","R FOR RABBIT","R; FOR; RABBIT","/assets/alphabets/R-img/rabbit.jpg","/assets/alphabets/R-img/robot.png","/assets/alphabets/R-img/rainbow.avif","R FOR ROBOT","R; FOR; ROBOT","R FOR RAINBOW","R; FOR; RAINBOW")
 
-function k() {
-  let a = document.getElementById("AlphaK");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaS","S FOR SUN","S; FOR; SUN","/assets/alphabets/S-img/sun.png","/assets/alphabets/S-img/steel.jpg","/assets/alphabets/S-img/star.jpg","S FOR STEEL","S; FOR; STEEL","S FOR STAR","S; FOR; STAR")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaK");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("K; for; Kite");
-          speechSynthesis.speak(msg);
-          spell("K For KITE");
-          target1.innerHTML = "<img src=../assets/alphabets/K-img/kite.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/K-img/kangaroo.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/K-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaT","T FOR TABLE","T; FOR; TABLE","/assets/alphabets/T-img/table.jpg","/assets/alphabets/T-img/top.jpg","/assets/alphabets/T-img/tree.avif","T FOR TOP","T; FOR; TOP","T FOR TREE","T; FOR; TREE")
 
-function l() {
-  let a = document.getElementById("AlphaL");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaU","U FOR UMBRELLA","U; FOR; UMBRELLA","/assets/alphabets/U-img/umbrella.png","/assets/alphabets/U-img/unicorn.webp","/assets/alphabets/U-img/uniform_img.jpg","U FOR UNICORN","U; FOR; UNICORN","U FOR UNIFORM","U; FOR; UNIFORM")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaL");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("L; for; Lion");
-          speechSynthesis.speak(msg);
-          spell("L For LION");
-          target1.innerHTML = "<img src=../assets/alphabets/L-img/lion.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/L-img/lamp.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/L-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaV","V FOR VAN","V; FOR; VAN","/assets/alphabets/V-img/van.png","/assets/alphabets/V-img/violin.png","/assets/alphabets/V-img/vase.jpg","V FOR VIOLIN","V; FOR; VIOLIN","V FOR VASE","V; FOR; VASE")
 
-function m() {
-  let a = document.getElementById("AlphaM");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaW","W FOR WATCH","W; FOR; WATCH","/assets/alphabets/W-img/watch4.png","/assets/alphabets/W-img/wire.jpg","/assets/alphabets/W-img/water_melon.webp","W FOR WIRE","W; FOR; WIRE","W FOR WATER-MELON","W; FOR; WATER,MELON")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaM");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("M; for; Mango");
-          speechSynthesis.speak(msg);
-          spell("M For MANGO");
-          target1.innerHTML = "<img src=../assets/alphabets/M-img/mango.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/M-img/monkey.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/M-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaX","X FOR XMAS-TREE","X; FOR; XMAS,TREE","/assets/alphabets/X-img/xmas-tree.png","/assets/alphabets/X-img/xylophone.jpg","/assets/alphabets/X-img/x-ray.webp","X FOR XYLOPHONE","X; FOR; XYLOPHONE","X FOR X-RAY","X; FOR; X,RAY")
 
-function n() {
-  let a = document.getElementById("AlphaN");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
+Alphabets("AlphaY","Y FOR YATCH","Y; FOR; YATCH","/assets/alphabets/Y-img/yatch.jpg","/assets/alphabets/Y-img/yak.webp","/assets/alphabets/Y-img/yoyo.jpg","Y FOR YAK","Y; FOR; YAK","Y FOR YOYO","Y; FOR; YOYO")
 
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaN");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("N; for; Net");
-          speechSynthesis.speak(msg);
-          spell("N For NET");
-          target1.innerHTML = "<img src=../assets/alphabets/N-img/net.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/N-img/neck.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/N-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function o() {
-  let a = document.getElementById("AlphaO");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaO");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("O; for; Orange");
-          speechSynthesis.speak(msg);
-          spell("O For ORANEG");
-          target1.innerHTML = "<img src=../assets/alphabets/O-img/orange.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/O-img/owl.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/O-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function p() {
-  let a = document.getElementById("AlphaP");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaP");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("P; for; Parrot");
-          speechSynthesis.speak(msg);
-          spell("P For PARROT");
-          target1.innerHTML = "<img src=../assets/alphabets/P-img/parrot.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/P-img/pen.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/P-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function q() {
-  let a = document.getElementById("AlphaQ");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaQ");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("Q; for; Queen");
-          speechSynthesis.speak(msg);
-          spell("Q For QUEEN");
-          target1.innerHTML = "<img src=../assets/alphabets/Q-img/queen.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/Q-img/question-mark.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/Q-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function r() {
-  let a = document.getElementById("AlphaR");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaR");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("R; for; Rabbit");
-          speechSynthesis.speak(msg);
-          spell("R For RABBIT");
-          target1.innerHTML = "<img src=../assets/alphabets/R-img/rabbit.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/R-img/robot.png width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/R-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function s() {
-  let a = document.getElementById("AlphaS");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaS");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("S; for; Sun");
-          speechSynthesis.speak(msg);
-          spell("S For SUN");
-          target1.innerHTML = "<img src=../assets/alphabets/S-img/sun.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/S-img/steel.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/S-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function t() {
-  let a = document.getElementById("AlphaT");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaT");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("T; for; Table");
-          speechSynthesis.speak(msg);
-          spell("T For TABLE");
-          target1.innerHTML = "<img src=../assets/alphabets/T-img/table.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/T-img/top.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/T-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function u() {
-  let a = document.getElementById("AlphaU");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaU");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("U; for; Umbrella");
-          speechSynthesis.speak(msg);
-          spell("U For UMBRELLA");
-          target1.innerHTML = "<img src=../assets/alphabets/U-img/umbrella.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/U-img/unicorn.webp width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/U-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function v() {
-  let a = document.getElementById("AlphaV");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaV");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("V; for; Van");
-          speechSynthesis.speak(msg);
-          spell("V For VAN");
-            target1.innerHTML = "<img src=../assets/alphabets/V-img/van.png width=250px height=250px/>";
-            target2.innerHTML = "<img src=../assets/alphabets/V-img/violin.png width=200px height=200px/>";
-            target3.innerHTML ="<img src=Images/V-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function w() {
-  let a = document.getElementById("AlphaW");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaW");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("W; for; Watch");
-          speechSynthesis.speak(msg);
-          spell("W For WATCH");
-          target1.innerHTML = "<img src=../assets/alphabets/W-img/watch4.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/W-img/wire.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/W-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function x() {
-  let a = document.getElementById("AlphaX");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaX");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("X; for; Xmas-Tree");
-          speechSynthesis.speak(msg);
-          spell("X For XMAS-TREE");
-          target1.innerHTML = "<img src=../assets/alphabets/X-img/xmas-tree.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/X-img/xylophone.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/X-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function y() {
-  let a = document.getElementById("AlphaY");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaY");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("Y; for; Yatch");
-          speechSynthesis.speak(msg);
-          spell("Y For YATCH");
-          target1.innerHTML = "<img src=../assets/alphabets/Y-img/yatch.jpg width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/Y-img/yak.webp width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/Y-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
-
-function z() {
-  let a = document.getElementById("AlphaZ");
-  let target1 = document.getElementById("image1");
-  let target2 = document.getElementById("img2");
-  let target3 = document.getElementById("img3");
-
-  
-  if ("speechSynthesis" in window) {
-      let demo = document.getElementById("AlphaZ");
-      demo.onclick = () => {
-          let msg = new SpeechSynthesisUtterance("Z; for; Zebra");
-          speechSynthesis.speak(msg);
-          spell("Z For ZEBRA");
-          target1.innerHTML = "<img src=../assets/alphabets/Z-img/zebra.png width=250px height=250px/>";
-          target2.innerHTML = "<img src=../assets/alphabets/Z-img/zip.jpg width=200px height=200px/>";
-          target3.innerHTML ="<img src=Images/Z-img/ width=200px height=200px />";
-    };
-  }
-  console.log("Clicked on a button");
-}
+Alphabets("AlphaZ","Z FOR ZEBRA","Z; FOR; ZEBRA","/assets/alphabets/Z-img/zebra.png","/assets/alphabets/Z-img/zip.jpg","/assets/alphabets/Z-img/zoo.avif","Z FOR ZIP","Z; FOR; ZIP","Z FOR ZOO","Z; FOR; ZOO")
