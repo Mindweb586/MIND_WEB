@@ -32,7 +32,7 @@ function Alphabets(id,spelling,speech,img,img4,img5,img2_spelling,img2_speech,im
     }
 }
 
-Alphabets("AlphaA","A FOR APPLE","A; FOR; Apple","assets/alphabets/A-img/apple.jpg","assets/alphabets/A-img/Aeroplane.jpg","assets/alphabets/A-img/Arrow.jpg","A FOR AEROPLANE","A; For; Aeroplane","A FOR ARROW","A; For; Arrow")
+Alphabets("AlphaA","A FOR APPLE","A; FOR; Apple","/assets/alphabets/A-img/apple.jpg","/assets/alphabets/A-img/Aeroplane.jpg","/assets/alphabets/A-img/Arrow.jpg","A FOR AEROPLANE","A; For; Aeroplane","A FOR ARROW","A; For; Arrow")
 
 Alphabets("AlphaB","B FOR BALL","B; for; BALL","/assets/alphabets/B-img/ball","/assets/alphabets/B-img/bird","/assets/alphabets/B-img/balloon.avif","B FOR BIRD","B; FOR; BIRD","B FOR BALLOON","B; FOR; BALLON")
 
