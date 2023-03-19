@@ -87,6 +87,18 @@ body{
     margin-top: 100px;
 }
 
+.img1:hover{
+    box-shadow: 3px 3px 7px black;
+}
+
+.img2:hover{
+    box-shadow: 3px 3px 7px black;
+}
+
+.img3:hover{
+    box-shadow: 3px 3px 7px black;
+}
+
 
 .img2{
     cursor: pointer;
