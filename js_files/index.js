@@ -1,43 +1,43 @@
 document.getElementsByClassName("image")[0].addEventListener("click", () => {
         
-        window.open("./html_pages/alphabets.html");
+        window.open("./html_pages/alphabets.html", "_self");
 });
 
 document.getElementsByClassName("article")[0].addEventListener("click", () => {
-        window.open("./html_pages/alphabets.html");
+        window.open("./html_pages/alphabets.html", "_self");
 });
 
 document.getElementsByClassName("image")[1].addEventListener("click", () => {
-        window.open("./html_pages/number_table.html");
+        window.open("./html_pages/number_table.html", "_self");
 });
 
 document.getElementsByClassName("article")[1].addEventListener("click", () => {
-        window.open("./html_pages/number_table.html");
+        window.open("./html_pages/number_table.html", "_self");
 });
 
 document.getElementsByClassName("image")[2].addEventListener("click", () => {
-        window.open("./html_pages/ADD.html");
+        window.open("./html_pages/ADD.html", "_self");
 });
 document.getElementsByClassName("article")[2].addEventListener("click", () => {
-        window.open("./html_pages/ADD.html");
+        window.open("./html_pages/ADD.html", "_self");
 });
 
 document.getElementsByClassName("image")[3].addEventListener("click", () => {
-        window.open("./html_pages/alpha-game.html");
+        window.open("./html_pages/alpha-game.html", "_self");
 });
 document.getElementsByClassName("article")[3].addEventListener("click", () => {
-        window.open("./html_pages/alpha-game.html");
+        window.open("./html_pages/alpha-game.html", "_self");
 });
 
 document.getElementsByClassName("image")[4].addEventListener("click", () => {
-        window.open("./html_pages/alpha-song.html");
+        window.open("./html_pages/alpha-song.html", "_self");
 });
 document.getElementsByClassName("article")[4].addEventListener("click", () => {
-        window.open("./html_pages/alpha-song.html");
+        window.open("./html_pages/alpha-song.html", "_self");
 });
 
 var popup_login = document.getElementById('popup_form');
-	var pop= document.getElementById('my-cards');
+var pop= document.getElementById('my-cards');
 var close = document.getElementById('close_btn');
 
 window.addEventListener("load", function(){

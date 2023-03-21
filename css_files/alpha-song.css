@@ -90,6 +90,7 @@ top: 458px;
     
     .container {       
         height: 100vh;
+        width: 100vw;
         background-color: aquamarine;
     }
     
@@ -97,10 +98,9 @@ top: 458px;
     .left_img {
         width: 200px;
         height: 200px;
-     
         position: absolute;
         top: 400px;
-        left: 25px;
+        left: 15px;
     
     }
     
@@ -115,7 +115,7 @@ top: 458px;
         height: 272px;
         position: absolute;
         top: 80px;
-        margin-left: 25px;        
+        left: 25px;        
     }
     
     .centre_img img {
@@ -129,7 +129,7 @@ top: 458px;
         height: 249px;
         position: absolute;
         top: 400px;
-        right: 0px;
+        left: 250px;
     }
     
     .right_img img {
@@ -140,10 +140,10 @@ top: 458px;
     .playbutton {
         height: 50px;
         width: 50px;
-        
         position: absolute;
         top: 575px;
         right: 45%;
+        left: 45%;
         z-index: 10;
     }
     
