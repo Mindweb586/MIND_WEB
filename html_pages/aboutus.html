@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css_files/navbar.css" />
+    <title>About-us</title>
+  </head>
+  <style>
     body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     html {
-        box-sizing: border-box;
+      box-sizing: border-box;
     }
 
     *,
     *:before,
     *:after {
-        box-sizing: inherit;
+      box-sizing: inherit;
     }
 
     /* .column {
@@ -30,136 +30,192 @@
         margin-bottom: 16px;
         padding: 0 8px;
     } */
-    .row{
-        display: flex;
-        flex-direction: row;
-        /* margin-left: 30px; */
-        justify-content: center;
+    .row {
+      display: flex;
+      flex-direction: row;
+      /* margin-left: 30px; */
+      justify-content: center;
     }
 
     .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin: 8px 15px;
-        margin-right: 20px;
-        /* height: 700px; */
-        width: 20%;
-        /* height: 10%; */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px 15px;
+      margin-right: 20px;
+      /* height: 700px; */
+      width: 20%;
+      /* height: 10%; */
+    }
+
+    .husain_card{
+        height: 500px;
     }
 
     .about-section {
-        padding: 3px;   
-        text-align: center;
-        background-color: #474e5d;
-        color: white;
+      padding: 3px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
     }
 
     .container {
-        padding: 0 16px;
-        /* width: %; */
+      padding: 0 16px;
+      /* width: %; */
     }
 
     .title {
-        color: grey;
+      color: grey;
+      padding: 6px;
     }
 
     .button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .email {
+        color: blue;
+        padding-bottom: 7px;
     }
 
     .card img {
-        width: 100%;    
-
+      width: 100%;
     }
 
-    .container h2{
-        margin: -5px 0px;
+    .container h2 {
+      margin: -5px 0px;
+      padding: 10px;
     }
     .button:hover {
-        background-color: #555;
+      background-color: #555;
+    }
+
+    .about-section h1{
+        padding: 10px;
+    }
+
+    .about-section p{
+        padding: 5px;
+    }
+
+    .info{
+        padding: 4px;
+        width: 250px;
     }
 
     @media screen and (max-width: 650px) {
-        /* .column {
+      /* .column {
             width: 100%;
             display: block;
         } */
     }
-</style>
+  </style>
 
-<body>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="../index.html" class="logo"><img src="../assets/LOGO.jpg" alt="logo" /></a>
+        <div class="nav-items">
+          <a href="../index.html">Home</a>
+          <a href="../html_pages/aboutus.html">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Test</a>
+          <div class="dropdown">
+            <a class="dropbtn">Features</a>
+            <div class="dropdown-content">
+              <a href="./html_pages/alphabets.html">Alphabets</a>
+              <a href="./html_pages/number_table.html">Number Table</a>
+              <a href="./html_pages/ADD.html">Number game</a>
+              <a href="./html_pages/alpha-game.html">Spelling-game</a>
+              <a href="./html_pages/alpha-song.html">Alphabet-song</a>
+            </div>
+          </div>
+        </div>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
 
     <div class="about-section">
-
-        <h1>About Us Page</h1>
-        <p>Some text about who we are and what we do.</p>
-        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      <h1>About Us</h1>
+      <p>This project is created by the students of KJSIT.</p>
+      <p>You can contact us with the details provided below.</p>
     </div>
 
-    <h2 style="text-align:center">Our Team</h2>
+    <h1 style="text-align: center">Our Team</h1>
     <div class="row">
+      <div class="card">
+        <img
+          src="../assets/about-us/ankit-removebg-preview.png"
+          alt="Ankit"
+          style="height: 282px"
+        />
 
-     
-            <div class="card">
-                <img src="../assets/LOGO.jpg" alt="John">
+        <div class="container">
+          <h2>Ankit Bhanushali</h2>
+          <p class="title">Student</p>
+          <p class="info">I'm the team leader of this project.</p>
+          <p class="email">aab2@somaiya.edu</p>
+          <a href="https://www.instagram.com/abhanushali2808/" target="_blank">
+            <p><button class="button">Contact</button></p>
+          </a>
+        </div>
+      </div>
 
-                <div class="container">
-                    <h2>Jane Doe</h2>
-                    <p class="title">CEO & Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>jane@example.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-      
+      <div class="card">
+        <img src="../assets/about-us/sagar-removebg-preview.png" alt="Sagar" />
 
-            <div class="card">
-                <img src="../assets/LOGO.jpg" alt="John">
+        <div class="container">
+          <h2>Sagar Bhanushali</h2>
+          <p class="title">Student</p>
+          <p class="info">I've done the front-end of this project.</p>
+          <p class="email">sagar.nb@somaiya.edu</p>
+          <a href="https://www.instagram.com/ssagar____/" target="_blank">
+            <p><button class="button">Contact</button></p>
+          </a>
+        </div>
+      </div>
 
-                <div class="container">
-                    <h2>Mike Ross</h2>
-                    <p class="title">Art Director</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>mike@example.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        
+      <div class="card">
+        <img
+          src="../assets/about-us/ishita-removebg-preview (1).png"
+          alt="John"
+          style="height: 282px"
+        />
+        <div class="container">
+          <h2>Ishita Haria</h2>
+          <p class="title">Student</p>
+          <p class="info">I've done the front-end of this project.</p>
+          <p class="email">ishita.h@somaiya.edu</p>
+          <a href="https://www.instagram.com/haria__ishita" target="_blank">
+            <p><button class="button">Contact</button></p>
+          </a>
+        </div>
+      </div>
 
-        
-            <div class="card">
-                <img src="../assets/LOGO.jpg" alt="John">
-                <div class="container">
-                    <h2>John Doe</h2>
-                    <p class="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>john@example.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        
-        
-        
-            <div class="card">
-                <img src="../assets/LOGO.jpg" alt="John">
-                <div class="container">
-                    <h2>John Doe</h2>
-                    <p class="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>john@example.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        
+      <div class="card husain_card">
+        <img src="../assets/about-us/husain-removebg-preview.png" alt="John" />
+        <div class="container">
+          <h2>Husain Bharmal</h2>
+          <p class="title">Student</p>
+          <p class="info">I'm contributing to the back-end of this project</p>
+          <p class="email">husain.bharmal@somaiya.edu</p>
+          <a href="https://www.instagram.com/_husainbharmal" target="_blank">
+            <p><button class="button">Contact</button></p>
+          </a>
+        </div>
+      </div>
     </div>
 
-</body>
-
+    <script src="../js_files/navbar.js"></script>
+  </body>
 </html>
