@@ -21,6 +21,10 @@ header{
   margin: auto;
 }
 
+.features{
+  position: absolute;
+  right: 50px;
+}
 
 .current a::after{
   content: '-';
