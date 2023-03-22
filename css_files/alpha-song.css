@@ -71,7 +71,18 @@ top: 458px;
     z-index: 10;
 }
 
-.play_reset{
+.resetbutton{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    /* translate: 740px 500px; */
+    position: absolute;
+    top: 506px;
+    left:55% ;
+    z-index: 10;
+}
+.play{
     font-family: 'Luckiest Guy', cursive;
     font-weight: 500;
     position: absolute;
@@ -80,6 +91,16 @@ top: 458px;
     top: 483px;
     left: 495;
     left: 49%;
+}
+.pause{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 500;
+    position: absolute;
+    font-size: large;
+    font: bold;
+    top: 483px;
+    left: 495;
+    left: 55%;
 }
 
 
@@ -141,9 +162,9 @@ top: 458px;
         height: 50px;
         width: 50px;
         position: absolute;
-        top: 575px;
+        top: 506px;
         right: 45%;
-        left: 45%;
+        left: 35%;
         z-index: 10;
     }
     
@@ -157,5 +178,15 @@ top: 458px;
     .play_reset1 {
         position: absolute;
         top: 400px;
+    }
+
+    .play{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 485px;
+        right: 45%;
+        left: 35%;
+        z-index: 10;
     }
 }
