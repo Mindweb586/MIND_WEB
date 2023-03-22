@@ -7,6 +7,14 @@ body{
     background-color: rgb(234, 143, 234);
     align-items: center;
     justify-content: center;
+    
+}
+
+.big_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
 }
 
 .game_container{
@@ -15,7 +23,8 @@ body{
     background-color: aliceblue;
     border-radius: 15px;
     box-shadow: 4px 2px 5px;
-    translate: 500px 100px;
+    padding: 0px 5px;
+
 }
 
 .game_container .heading{
@@ -23,15 +32,14 @@ body{
     padding-left: 110px;
     font-size: 40px;
     border-bottom: 2px solid black;
+    
 }
 
 .game_container .image_hint{
     width: 150px;
     height: 150px;
     border: 2px solid black;
-    margin-left: 180px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 35%;
 }
 
 .game_container .inputs{
@@ -51,14 +59,17 @@ body{
     border: 1px solid black;
     text-transform: uppercase;
 }
-
+.info{
+    padding: 10px;
+}
 .game_container .reset{
-    margin-left : 180px;
+    
     width: 150px;
     height: 40px;
     border-radius: 10px;
     border: 1px solid black;
     cursor: pointer;
+    margin: 10px 35%;
 }
 
 .game_container .info{
@@ -70,6 +81,7 @@ body{
     background-color: rgb(206, 205, 205);
 }
 
+
 .typeinput{
     text-transform: uppercase;
     z-index: -999;
@@ -77,7 +89,42 @@ body{
     opacity: 0;
 }
 
-/* navbar css */
+@media only screen and (max-width: 768px) {
+
+    .game_container{
+        margin: 0px;
+        padding: 0px;
+        width: fit-content;
+        height: fit-content;
+    }
+    .game_container .heading{
+        font-size: 25px;
+        padding: 10px 20%;
+
+    }
+    .image_hint img{
+       padding: 0;
+       margin: 0;
+       /* padding: 10px; */
+    }
+    .game_container .image_hint{
+        
+       margin-top: 10px;
+       margin-bottom: 10px;
+        margin-left: 29%;
+    
+    }
+    .game_container .reset{
+        margin: 10px 75px;
+    }
+    .info{
+        margin: 10px;
+    }
+    .game_container input{
+        height: 30px;
+        width: 30px;
+    }
+}
 
 
 
