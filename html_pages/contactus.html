@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,110 +10,121 @@
 </head>
 <style>
     * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
-  .container{
-    font-family: 'Roboto Mono', monospace;
-    height: 100%;
-    height: 100vh;
-  }
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-input[type=email], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+    .container {
+        font-family: 'Roboto Mono', monospace;
+        height: 100%;
+        height: 100vh;
+    }
 
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
+    /* Style inputs */
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+    input[type=email],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
 
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
 
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    /* Style the container/contact section */
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
 
-.map{
-    width: 100%;
-    height: 60vh;
-}
+    /* Create two columns that float next to eachother */
+    .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+    }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media only screen and (max-width: 768px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-  .map{
-    height: 30vh;
-  }
-  .container{
-    height: 120vh;
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-  }
-}
+    .map {
+        width: 100%;
+        height: 60vh;
+    }
 
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media only screen and (max-width: 768px) {
+
+        .column,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .map {
+            height: 30vh;
+        }
+
+        .container {
+            height: 120vh;
+
+        }
+    }
 </style>
+
 <body>
     <nav>
         <div class="nav-container">
-          <a href="../index.html" class="logo" ><img  src="../assets/LOGO.jpg" alt="logo"></a>
-          
+          <a href="./index.html" class="logo"><img src="../assets/LOGO.jpg" alt="logo"></a>
           <div class="nav-items">
-            <a href="../index.html">Home</a>
-            <a href="../html_pages/aboutus.html">About us</a>
+            <a href="./index.html">Home</a>
+            <a href="./html_pages/aboutus.html">About us</a>
             <a href="#">Contact us</a>
             <a href="#">Test</a>
             <div class="dropdown">
-              <a class="dropbtn">Features</a>
-              <div class="dropdown-content">
-                <a href="./alphabets.html">Alphabets</a>
-                <a href="./number_table.html">Number Table</a>
-                <a href="./ADD.html">Math game</a>
-                <a href="./alpha-game.html">Spelling-game</a>
-                <a href="./alpha-song.html">Alphabet-song</a>
-              </div>
+                <a class="dropbtn">Features</a>
+                <div class="dropdown-content">
+                  <a href="./html_pages/alphabets.html" >Alphabets</a>
+                  <a href="./html_pages/number_table.html" >Number Table</a>
+                  <a href="./html_pages/ADD.html" >Number game</a>
+                  <a href="./html_pages/alpha-game.html" >Spelling-game</a>
+                  <a href="./html_pages/alpha-song.html" >Alphabet-song</a>  
+                </div>
+            </div>
+          </div>
           <div class="hamburger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -120,38 +132,43 @@ input[type=submit]:hover {
           </div>
         </div>
       </nav>
-      
+
     <div class="container">
         <div style="text-align:center">
-          <h2>Contact Us</h2>
-          <p>Swing by for a cup of coffee, or leave us a message:</p>
+            <h2>Contact Us</h2>
+            <p>Swing by for a cup of coffee, or leave us a message:</p>
         </div>
         <div class="row">
-          <div class="column">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4019316106874!2d72.86889221482143!3d19.046057987105158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf21727f6e19%3A0x473006136ad440dc!2sK.%20J.%20Somaiya%20Institute%20of%20Engineering%20and%20Information%20Technology!5e0!3m2!1sen!2sin!4v1679470522309!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="column">
-            <form action="/action_page.php">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-              
-              <label for="category">Who is filling the form</label>
-              <select id="category" name="category">
-                  <option value="Student">Student</option>
-                  <option value="Parent">Parent</option>
-                  <option value="Gurdian">Gurdian</option>
-                </select>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email address">
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <input type="submit" value="Submit">
-            </form>
-          </div>
+            <div class="column">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4019316106874!2d72.86889221482143!3d19.046057987105158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf21727f6e19%3A0x473006136ad440dc!2sK.%20J.%20Somaiya%20Institute%20of%20Engineering%20and%20Information%20Technology!5e0!3m2!1sen!2sin!4v1679470522309!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="column">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="category">Who is filling the form</label>
+                    <select id="category" name="category">
+                        <option value="Student">Student</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Gurdian">Gurdian</option>
+                    </select>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address">
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
-      </div>
-      <script src="../js_files/navbar.js"></script>
+    </div>
+    <script src="../js_files/navbar.js"></script>
 </body>
+
 </html>
