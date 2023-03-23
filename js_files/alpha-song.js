@@ -18,7 +18,7 @@ playbtn.addEventListener('click',()=>{
     right.innerHTML=    `<img src=${imgobj[0]} />`
     centre.innerHTML=   `<img src=${imgobj[1]} />`
     i++
-}, 2350);
+}, 2400);
     return interval
 })
 
