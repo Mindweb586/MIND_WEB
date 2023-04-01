@@ -88,7 +88,14 @@ body{
     position: absolute;
     opacity: 0;
 }
-
+/* .image_hint{
+    width: 150px;
+    height: 150px;
+} */
+.imagesize{
+    width: 150px;
+    height: 150px;
+}
 @media only screen and (max-width: 768px) {
 
     .game_container{
@@ -125,18 +132,3 @@ body{
         width: 30px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
